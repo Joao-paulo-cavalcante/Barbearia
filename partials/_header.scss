@@ -1,0 +1,72 @@
+.header-content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    
+
+}
+
+i{
+    color: $white-normal;
+    
+}
+.icons{
+    display: flex;
+    gap: 14px;
+}
+a{
+    color: $white-normal;
+    text-decoration: none;
+}
+.agendamento{
+    background-color: transparent;
+    border: 1px solid $white-normal;
+    padding: 10px;
+    border-radius: 5px;
+    color: $white-normal;
+    transition: background-color 0.8s;
+  
+}
+.agendamento:hover{
+    background-color: $red-light;
+    border: 1px solid $red-light;
+}
+
+.icons a:hover{
+    i{
+        animation: tranlatey 0.8s infinite alternate;
+        color:$red-light;
+    }
+}
+@keyframes tranlatey{
+    from{
+        transform: translateY(0) scale(1);
+    }
+    to{
+        transform: translateY(-8px) scale(1.1);
+    }
+}
+@media  screen and (max-width: 768px) {
+    .header-content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .icons{
+        margin-top: 20px;
+        gap: 40px;
+        font-size: 20px;
+    }
+    .logo{
+        width: 180px;
+        margin-top: 46px;
+
+    }
+    .agendamento{
+        display: none;
+    }
+    
+}
